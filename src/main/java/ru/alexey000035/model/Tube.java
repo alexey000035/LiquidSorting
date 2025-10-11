@@ -12,9 +12,9 @@ public class Tube {
         this.liquids = new ArrayList<>();
     }
 
-    public Tube(int capacity, List<String> liquid) {
+    public Tube(int capacity, List<String> liquids) {
         this.capacity = capacity;
-        this.liquids = new ArrayList<>(capacity);
+        this.liquids = new ArrayList<>(liquids);
     }
 
     public int getCapacity() {
@@ -52,7 +52,6 @@ public class Tube {
     public int spaceLeft() {
         return capacity - liquids.size();
     }
-
 
     public Tube copy() {
         return new Tube(this.capacity, new ArrayList<>(this.liquids));
