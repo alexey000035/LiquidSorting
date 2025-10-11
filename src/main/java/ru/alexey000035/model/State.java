@@ -15,10 +15,10 @@ public class State {
 
     public boolean isSolved() {
         for (Tube tube : tubes) {
-            if(tube.isEmpty()) continue;;
+            if(tube.isEmpty()) continue;
 
             String color = tube.peek();
-            for (String drop : tube.getLiquid()) {
+            for (String drop : tube.getLiquids()) {
                 if (!color.equals(drop)) return false;
             }
         }
