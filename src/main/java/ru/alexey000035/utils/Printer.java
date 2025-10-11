@@ -12,4 +12,10 @@ public class Printer {
             System.out.println("Пробирка " + i + ": " + tubes.get(i).getLiquids());
         }
     }
+
+    public static void printMoves(List<String> moves) {
+        for (String move : moves) {
+            System.out.println(move);
+        }
+    }
 }
