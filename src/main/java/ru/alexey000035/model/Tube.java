@@ -56,4 +56,16 @@ public class Tube {
     public Tube copy() {
         return new Tube(this.capacity, new ArrayList<>(this.liquids));
     }
+
+    public void pushMultiple(List<String> colors) {
+        liquids.addAll(colors);
+    }
+
+    public List<String> popMultiple(int n) {
+        List<String> removed = new ArrayList<>();
+        for (int i = 0; i < n && !isEmpty(); i++) {
+            removed.add(liquids.remove(liquids.size() - 1));
+        }
+        return removed;
+    }
 }
